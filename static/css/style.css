@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+.gradient-text {
+    /* Fallback: Set a background color. */
+    background-color: red;
+    /* Create the gradient. */
+    background-image: linear-gradient(45deg, #fc7c14, #ff07de);
+    /* Set the background size and repeat properties. */
+    background-size: 100%;
+    background-repeat: repeat;
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+.nav-link,
+.nav-link i {
+    /* Fallback: Set a background color. */
+    background-color: black;
+    /* Create the gradient. */
+    background-image: linear-gradient(45deg, #fc7c14, #fc7c14);
+    /* Set the background size and repeat properties. */
+    background-size: 100%;
+    background-repeat: repeat;
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    transition: all 0.5s ease;
+}
+
+.nav-link:hover,
+.nav-link i:hover,
+.nav-link:hover i {
+    /* Fallback: Set a background color. */
+    background-color: black;
+    /* Create the gradient. */
+    background-image: linear-gradient(45deg, #6d1c66, #ff07de);
+    /* Set the background size and repeat properties. */
+    background-size: 100%;
+    background-repeat: repeat;
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+.active .nav-link,
+.active .nav-link i {
+    font-weight: 600;
+    /* Fallback: Set a background color. */
+    background-color: black;
+    /* Create the gradient. */
+    background-image: linear-gradient(45deg, #6d1c66, #ff07de) !important;
+    /* Set the background size and repeat properties. */
+    background-size: 100%;
+    background-repeat: repeat;
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    transition: all 0.5s ease;
+}
+
+.main_bg {
+    min-height: 90vh;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+.heading-button {
+    margin-top: 80px !important;
+}
+
+.main-pedding {
+    padding: 100px 0;
+}
+
+.title-container {
+    margin-bottom: 3rem;
+}
+
+.title-container p {
+    color: orange;
+    text-align: center;
+    font-weight: bold;
+}
+
+.title-container span::after {
+    content: "";
+    position: absolute;
+    border-radius: 5rem;
+    background: orange;
+    width: 8rem;
+    height: 3px;
+    margin: 1rem 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.dive-into-learning .card-title {
+    color: orange;
+    text-align: center;
+}
+
+.event-box-1,
+.event-box-2 {
+    color: white;
+    min-height: 400px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+.footer {
+    padding: 50px 0;
+    background-color: #000;
+    color: white;
+}

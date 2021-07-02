@@ -1,0 +1,10 @@
+.subject_bg {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    color: white !important;
+}

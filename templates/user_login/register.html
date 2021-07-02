@@ -1,0 +1,68 @@
+{% extends 'incFiles/basic.html' %}
+{% load static %}
+
+{% block body %}
+<div class="container my-5 d-flex justify-content-center align-items-center" style="padding:2rem 0;">
+    <div class="row" style="width:100%;min-height:70vh;box-shadow:0.5px 0.5px 5px rgba(0,0,0,0.2);border-radius: 5px;">
+        <div class="login-page my-4 col-md-8 d-flex flex-column justify-content-center align-items-center">
+            <p class="h3 gradient-text mt-auto" unselectable="on" onselectstart="return false;"
+                onmousedown="return false;">Member Register</p>
+            <form action="/register" method="POST" class="d-flex flex-column justify-content-center align-items-center" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="row d-flex justify-content-center align-items-center mx-2">
+                    <div class="col-md-6">
+                        <div class="input-icons-signup">
+                            <i class="fas fa-user-circle icon"></i>
+                            <input class="rounded-pill" type="text" name="usrname" placeholder="Username" required>
+                        </div>
+                        <div class="input-icons-signup">
+                            <i class="fas fa-lock icon"></i>
+                            <input class="rounded-pill" type="password" name="pswd" placeholder="Password" required>
+                        </div>
+                        <div class="input-icons-signup">
+                            <i class="fas fa-user icon"></i>
+                            <input class="rounded-pill" type="text" name="fname" placeholder="First Name" required>
+                        </div>
+                        <div class="input-icons-signup">
+                            <i class="fas fa-user icon"></i>
+                            <input class="rounded-pill" type="text" name="lname" placeholder="Last Name" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="" class="">Profile Picture</label>
+                        <div class="input-icons-signup">
+                            <i class="fas fa-images icon"></i>
+                            <input class="rounded-pill" type="file" name="usrImg" accept=".jpg , .png , .jpeg" required>
+                        </div>
+                        <div class="input-icons-signup">
+                            <i class="fas fa-envelope icon"></i>
+                            <input class="rounded-pill" type="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="input-icons-signup">
+                            <i class="fas fa-phone-alt icon"></i>
+                            <input class="rounded-pill" type="text" name="mobile" placeholder="Mobile Number" required>
+                        </div>
+                        <div class="input-icons-signup">
+                            <i class="fas fa-calendar-week icon"></i>
+                            <input class="rounded-pill" type="date" name="dob" placeholder="Date Of Birth" required>
+                        </div>
+                    </div>
+                    <div class="input-icons">
+                        <button class="btn btn-success btn-md btn-block" style="border-radius:50px">Submit</button>
+                    </div>
+                </div>
+            </form>
+            <a href="login" class="forget-pass mt-auto">Already have an Account <i
+                    class="fas fa-chevron-right ml-2"></i></a>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+            <img src="{% static 'svg/register_member.svg' %}" width="300" alt="">
+        </div>
+    </div>
+</div>
+
+<script>
+    // Data Picker Initialization
+    $('.datepicker').datepicker();
+</script>
+{% endblock body %}

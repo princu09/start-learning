@@ -1,0 +1,42 @@
+.login-page .gradient-text {
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+.login-page input {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    outline: none;
+    border: none;
+    padding: 0.5rem 1rem 0.5rem 3rem;
+}
+
+.input-icons .icon,
+.input-icons-signup .icon {
+    position: absolute;
+    padding: 10px;
+    min-width: 50px;
+    text-align: center;
+}
+
+.input-icons {
+    width: 70%;
+    margin-bottom: 10px;
+}
+
+.input-icons-signup {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.forget-pass {
+    color: grey !important;
+    font-size: 13px !important;
+    text-decoration: none !important;
+    transition: all 0.5s ease-in-out;
+}
+
+.forget-pass:hover {
+    color: green !important;
+    font-weight: 500;
+}

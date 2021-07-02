@@ -1,0 +1,31 @@
+{% extends 'incFiles/basic.html' %}
+{% load static %}
+
+{% block body %}
+<div class="container my-5 d-flex justify-content-center align-items-center" style="padding:2rem 0;">
+    <div class="row" style="width:80%;min-height:70vh;box-shadow:0.5px 0.5px 5px rgba(0,0,0,0.2);border-radius: 5px;">
+        <div class="col-md-6 d-flex justify-content-center align-items-center">
+            <img src="{% static 'svg/login_member.svg' %}" width="300" alt="">
+        </div>
+        <div class="login-page my-4 col-md-6 d-flex flex-column justify-content-center align-items-center">
+            <p class="h3 gradient-text mt-auto" unselectable="on" onselectstart="return false;" onmousedown="return false;">Member Login</p>
+            <form action="/login" method="POST" class="d-flex flex-column justify-content-center align-items-center">
+            {% csrf_token %}
+                <div class="input-icons">
+                    <i class="fas fa-user icon"></i>
+                    <input class="rounded-pill" type="text" name="usrname" placeholder="Username">
+                </div>
+                <div class="input-icons">
+                    <i class="fas fa-lock icon"></i>
+                    <input class="rounded-pill" type="password" name="pswd" placeholder="Password">
+                </div>
+                <div class="input-icons">
+                    <button class="btn btn-success btn-md btn-block" style="border-radius:50px">Submit</button>
+                </div>
+            </form>
+            <a href="" class="forget-pass">Forget Username / Password ? </a>
+            <a href="register" class="forget-pass mt-auto">Create your Account <i class="fas fa-chevron-right ml-2"></i></a>
+        </div>
+    </div>
+</div>
+{% endblock body %}
