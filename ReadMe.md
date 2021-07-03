@@ -2,8 +2,4 @@
 
 ![Screenshot](./Start_Learning.jpg)
 
-Site Admin Panel : 
-+---------------------+
-| username = admin |
-| password = admin |
-+---------------------+
+Site Admin Panel : Username & Password = Admin
