@@ -1,0 +1,48 @@
+{% extends 'incFiles/basic.html' %} {% load static %} {% block body %}
+
+<div class="subject_bg d-flex flex-column justify-content-center align-items-center"
+    style="background-image: linear-gradient(45deg , rgba(0,0,0,0.5) , rgba(0,0,0,0.5)),url({% static 'images/bg/subject_bg.jpg' %});"
+    unselectable="on" onselectstart="return false;" onmousedown="return false;">
+    <div class="jumbotron jumbotron-fluid bg-transparent text-white">
+        <p class="text-white display-4 text-center mb-5" style="font-weight:500">{{sub}}</p>
+        <ol class="breadcrumb bg-transparent d-flex justify-content-center">
+            <li class="breadcrumb-item"><a class="text-white" href="/home">Home</a></li>
+            <li class="breadcrumb-item"><a class="text-white" href="/home#diveintolearning">Curriculum</a></li>
+            <li class="text-white breadcrumb-item active" aria-current="page">Standard {{std}}</li>
+        </ol>
+        <hr style="background:white">
+        <div class="container text-center">
+            <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, quibusdam?</p>
+        </div>
+    </div>
+</div>
+
+<div class="container main-pedding dive-into-learning">
+    <div class="title-container text-center">
+        <p class="h3">Dive Deeper</p>
+        <span></span>
+    </div>
+    <div class="d-flex justify-content-center">
+        <p class="col-md-9 text-center">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, sunt. Error, a. Eligendi tenetur incidunt sit
+            soluta, ut necessitatibus voluptates.</p>
+    </div>
+    <div class="row mt-4">
+        {% for x in lactures %}
+        <div class="card m-2" style="width: 18rem;">
+            <div class="card-body text-center">
+                <h5 class="card-title">Chapter : {{x.name}}</h5>
+                <a href="/lacture_details/{{x.id}}"><button class="mt-3 btn btn-sm btn-outline-primary">Get
+                        Lacture</button></a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% if user.fieldName != "student" %}
+
+    <div class="container text-center">
+        <a href="/add_chapter/{{sub}}/{{std}}"><button class="btn btn-sm btn-outline-success">Add Chapter</button></a>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

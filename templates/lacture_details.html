@@ -1,0 +1,65 @@
+{% extends 'incFiles/basic.html' %} {% load static %} {% block body %}
+<div class="container my-5">
+    <div class="title-container text-center">
+        <p class="h3">Lacture Details</p>
+        <span></span>
+    </div>
+    <div class="d-flex justify-content-center">
+        <p class="col-md-9 text-center">Created On <span
+                class="font-weight-bold">{% for x in lacture %}{{x.date}}{% endfor %}</span> By <span
+                class="font-weight-bold text-danger">Admin</span></p>
+    </div>
+</div>
+<div class="container d-flex justify-content-center my-5">
+    <div class="row">
+        <div class="card m-2" style="width: 18rem;">
+            <div class="card-body text-center">
+                <h5 class="card-title">Download Presentation</h5>
+                <a href="/media/{{download.0}}" download><button class="mt-3 btn btn-sm btn-outline-primary">Get
+                        Files</button></a>
+            </div>
+        </div>
+        <div class="card m-2" style="width: 18rem;">
+            <div class="card-body text-center">
+                <h5 class="card-title">Download Notes</h5>
+                <a href="/media/{{download.1}}" download><button class="mt-3 btn btn-sm btn-outline-primary">Get
+                        Files</button></a>
+            </div>
+        </div>
+        <div class="card m-2" style="width: 18rem;">
+            <div class="card-body text-center">
+                <h5 class="card-title">Download Videos</h5>
+                <a href="/media/{{download.2}}" download><button class="mt-3 btn btn-sm btn-outline-primary">Get
+                        Files</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="container my-5">
+    <p class="h4">Questions & Queries</p>
+    <p>Post Your Comments and Questions below : </p>
+
+    <div class="container d-flex flex-column mt-4"></div>
+    <form action="/comment/{{lacture.0.id}}" method="POST">
+        {% csrf_token %}
+        <p class="text-muted" style="font-weight: 500;font-size: 13px;">Comment *</p>
+        <textarea name="comment" id="" cols="30" rows="5" style="border-radius:5px;padding:5px;"></textarea>
+        <br>
+        <button class="btn btn-sm btn-success">Add Comment</button>
+    </form>
+    <div class="card mt-4" style="width:38rem">
+        <div class="card-header">
+            Comments
+        </div>
+        {% for x in comment %}
+        <div class="card-body">
+            <div class="d-flex">
+                <i class="fas fa-user-circle fa-2x"></i>
+                <p class="card-title ml-3">{{x.comment}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

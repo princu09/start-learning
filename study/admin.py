@@ -3,7 +3,7 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 # Import Models
-from .models import UserManage
+from .models import UserManage , Chapter , Comment
 
 class CustomData(UserAdmin):
     add_form = UserCreationForm
@@ -19,3 +19,5 @@ class CustomData(UserAdmin):
 
 
 admin.site.register(UserManage, CustomData)
+admin.site.register(Chapter)
+admin.site.register(Comment)

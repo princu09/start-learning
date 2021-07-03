@@ -1,0 +1,69 @@
+{% extends 'incFiles/basic.html' %} {% load static %} {% block body %}
+{% if user.fieldName != "student" %}
+<div class="container my-5">
+    <div class="title-container text-center">
+        <p class="h3">Add Lacture</p>
+        <span></span>
+    </div>
+
+    <div class="container my-5 d-flex justify-content-center align-items-center" style="padding:2rem 0;">
+        <div class="add-chapter my-4 col-md-6 d-flex flex-column justify-content-center align-items-center">
+            <form action="" method="POST" class="d-flex flex-column justify-content-center align-items-center"
+                enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="input-icons-add-chapter">
+                    <i class="far fa-signature icon"></i>
+                    <input class="rounded-pill" type="text" name="name" placeholder="Chapter Name">
+                </div>
+                <div class="input-icons-add-chapter">
+                    <select name="subject" class="rounded-pill">
+                        <option selected>Subject</option>
+                        <option value="Gujarati">Gujarati</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="English">English</option>
+                        <option value="Mathematics">Mathematics</option>
+                        <option value="Science">Science</option>
+                        <option value="Social Study">Social Study</option>
+                    </select>
+                </div>
+                <div class="input-icons-add-chapter">
+                    <select name="standard" class="rounded-pill">
+                        <option selected>Standard</option>
+                        <option value="12">12</option>
+                        <option value="11">11</option>
+                        <option value="10">10</option>
+                        <option value="9">9</option>
+                        <option value="8">8</option>
+                        <option value="7">7</option>
+                        <option value="6">6</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <label for="">Presentation File</label>
+                <div class="input-icons-add-chapter">
+                    <i class="far fa-presentation icon"></i>
+                    <i class="fas fa-user icon"></i>
+                    <input class="rounded-pill" type="file" name="presentation" placeholder="Presentation">
+                </div>
+                <label for="">Notes File</label>
+                <div class="input-icons-add-chapter">
+                    <i class="far fa-sticky-note icon"></i>
+                    <i class="fas fa-user icon"></i>
+                    <input class="rounded-pill" type="file" name="notes" placeholder="Notes">
+                </div>
+                <label for="">Video File</label>
+                <div class="input-icons-add-chapter">
+                    <i class="fab fa-youtube icon"></i>
+                    <input class="rounded-pill" type="file" name="video" placeholder="Video">
+                </div>
+                <div class="input-icons-add-chapter">
+                    <button class="btn btn-success btn-md btn-block" style="border-radius:50px">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% else %}
+hello
+{% endif %}
+{% endblock %}

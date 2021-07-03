@@ -1,0 +1,29 @@
+.add-chapter input {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    outline: none;
+    border: none;
+    padding: 0.5rem 1rem 0.5rem 3rem;
+}
+
+.add-chapter .icon {
+    position: absolute;
+    padding: 10px;
+    min-width: 50px;
+    text-align: center;
+}
+
+.input-icons-add-chapter {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.add-chapter select {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    outline: none;
+    border: none;
+    padding: 0.5rem 1rem 0.5rem 3rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

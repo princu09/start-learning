@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/subject.css' %}">
     <link rel="stylesheet" href="{% static 'css/login-page.css' %}">
+    <link rel="stylesheet" href="{% static 'css/add-chapter.css' %}">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static 'bst/css/bootstrap.css' %}">
@@ -51,14 +52,14 @@
                 </li>
                 {% if user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link" href="logout"><i class="far fa-sign-out"></i> Logout</a>
+                    <a class="nav-link" href="/logout"><i class="far fa-sign-out"></i> Logout</a>
                 </li>
                 {% else %}
                 <li class="{% if "login" in request.path %}active{% endif %} nav-item">
-                    <a class="nav-link" href="login"><i class="far fa-sign-in"></i> Login</a>
+                    <a class="nav-link" href="/login"><i class="far fa-sign-in"></i> Login</a>
                 </li>
                 <li class="{% if "register" in request.path %}active{% endif %} nav-item">
-                    <a class="nav-link" href="register"><i class="far fa-user-plus"></i> Register</a>
+                    <a class="nav-link" href="/register"><i class="far fa-user-plus"></i> Register</a>
                 </li>
                 {% endif %}
             </ul>
